@@ -1,0 +1,11 @@
+<launch>
+    <node pkg="line_laser_ros" type="n301n_serial_publisher" name="line_laser" output="screen">
+    <param name="port" value="/dev/ttyUSB0"/>
+    <param name="baud_rate" value="115200"/>
+	<param name="frame_id" value="base_laser_link"/>
+    <param name="version_num" value="2"/>
+    </node>
+<!--
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find line_laser_ros)/launch/laser.rviz"/>
+-->
+</launch>
